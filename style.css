@@ -1,0 +1,265 @@
+body{
+	min-width:1024px;/*misura di schermo minima per una visualizzazione ottimale*/
+}
+
+html{
+	min-height:100%; /*per evitare che lo sfondo si divida in bande*/
+	background:url(immagini/BG.jpg)
+}
+
+.headIMG{
+	float:right;
+	margin-right:2%;
+	box-shadow:0 0 20px #999;
+	border-radius:4px
+}
+
+.mainTitle{
+	margin-left:10%;
+	margin-right:15%;
+}
+
+.menu{
+	float:left;
+	width:15%;
+	margin-left:0%;
+}
+
+.content{
+	margin-left:16%;
+	margin-right:15%;
+}
+
+.header{
+	background:#fff url(immagini/header.jpg) no-repeat center center;
+    background-size:cover;
+	margin-left:auto;
+	margin-right:auto;
+	max-width:100%;
+	height:35%;
+	min-height:290px;
+}
+
+/*da qui codice per il resize su schermi di cellulari*/
+@media screen and (max-width: 1024px){
+	.header{
+		margin-left:auto;
+		margin-right:auto;
+		max-width:100%;
+	}
+	.content{
+		margin-right:15%;
+		margin-left:16%;
+		min-width:360px;
+	}
+	
+	.mainTitle{
+		margin-left:10%;
+		margin-right:15%;
+	}
+	
+	.menu{
+		float:left;
+		width:15%;
+		margin-left:0%;
+	}
+	.text{
+		width:100%;
+		height:4%;
+		min-height:20px;
+		background-image: -moz-linear-gradient(0% 10% 90deg, #fff, #999);
+		border-radius: 4px;
+	}
+
+	.widetext{
+		width:100%;
+		height:60%;
+		border-radius: 4px;
+	}
+	
+	.img{
+		width:100%;
+		border-radius:6px;
+	}
+}
+
+/*pulsanti*/
+.button{
+	text-shadow: 0 1px 1px #fff;
+	color: rgba(0, 0, 0, 0.8);
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 5px;
+	margin:3px;
+	width:140px;
+	height:3%;
+	min-height:30px;
+	background-color:#f3ad9c;
+}
+.button:hover {
+	background-color: #f3ad9c;
+}
+
+.menubuttons{
+	font-size:90%;
+	text-shadow: 0 1px 1px #fff;
+	color: rgba(0, 0, 0, 1);
+	border: 1px solid rgba(000,000,000,0.3);
+	/*border-radius: 5px;*/
+	margin:0px;
+	width:16.6%;
+	min-width:143.5px;
+	vertical-align:middle;
+	white-space: normal;
+	height:4%;
+	min-height:40px;
+	background-color:#f3ad9c;
+	opacity:0.85;
+}
+.menubuttons:hover {
+	font-size:95%;
+	font-weight:bold;
+}
+
+/*questi servono per il menu orizzontale*/
+.list {
+/*visualizzo tutti i pulsanti sulla stessa linea*/
+    display: inline;
+}
+
+ul#horiznav, #horiznav ul{/*remove the bullets from the dropdown ul as well*/
+margin:0;
+padding:0;
+list-style-type:none;
+}
+
+#horiznav li{
+position:relative/*set position:relative as the start point for absolutely positioning the dropdown*/
+}
+
+#horiznav li ul{
+display:none;/*hide the dropdown*/
+position:absolute;/*position it absolutely..*/
+left:0;/*align the left edge with the left edge of the parent li...*/
+/*top:32px;...and 32px down from the top - 30px height + 2px for the border*/
+list-style-type:none;
+}
+
+#horiznav li:hover ul {
+display:block;/*display the ul when the parent li is hovered*/
+list-style-type:none;
+}
+
+.content_menu{
+	margin-left:16%;
+	margin-right:auto;
+}
+
+ul#vertnav, #vertnav ul{/*remove the bullets from the dropdown ul as well*/
+margin:0;
+padding:0;
+list-style-type:none;
+}
+
+#vertnav li{
+position:relative/*set position:relative as the start point for absolutely positioning the dropdown*/
+}
+
+#vertnav li ul{
+display:none;/*hide the dropdown*/
+position:absolute;/*position it absolutely..*/
+left:145px;/*align the left edge with the left edge of the parent li...*/
+top:0px;/*...and 32px down from the top - 30px height + 2px for the border*/
+list-style-type:none;
+}
+
+#vertnav li:hover ul {
+display:inline;/*display the ul when the parent li is hovered*/
+list-style-type:none;
+}
+
+
+/*caselle di testo*/
+.text{
+	width:100%;
+	height:4%;
+	min-height:30px;
+	background-image: -moz-linear-gradient(0% 10% 90deg, #fff, #999);
+	border-radius: 4px;
+}
+
+.login{
+	margin:0 auto;
+	display: block;
+	width:40%;
+	min-width:200px;
+	height:4%;
+	min-height:30px;
+	background-image: -linear-gradient(0% 10% 90deg, #fff, #999);
+	border-radius: 4px;
+}
+
+.widetext{
+	width:100%;
+	height:60%;
+	border-radius: 4px;
+}
+
+/*stile immagine*/
+.img{
+	width:80%;
+	border-radius:10px;
+	margin-left:10%;
+}
+
+/*campo di stile degli oggetti nella pagina*/
+
+fieldset{
+	width:100%;
+	border:0;
+	/*border-radius:1px;
+	margin:0 auto;*/
+	background:white;
+	box-shadow:0 0 10px #999;
+}
+
+/*per tutte le scritte che devono stare al centro*/
+.center{
+	text-align:center;
+}
+
+/*gestione caratteri*/
+p{
+	font-family: Cambria, serif;
+	text-align: justify;
+	line-height: 1.3em;
+}
+
+h2 {
+	font-family: Cambria, serif;
+	color: black;
+}
+
+h4 {
+	font-family: Cambria, serif;
+	/*line-height: 1.3em;*/
+	text-align: justify;
+}
+
+h5 {
+	font-family: Cambria, serif;
+	color: red;
+}
+
+h6{
+	font-family: Cambria, serif;
+	color: black;
+}
+
+/*gestione link*/
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {
+	text-decoration:underline;
+	color:brown;
+}
+a:active {text-decoration:underline;}
